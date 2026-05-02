@@ -8,6 +8,8 @@ public class Empleado {
 	private String direccion;
 	private String estadoCivil;
 	private LocalDate fechaDeNacimiento;
+	private double sueldoBasico;
+	 
 	
 	
 	public Empleado(String nombre,String direccion,String estadoCivil, LocalDate fechaDeNacimiento) {
@@ -22,6 +24,10 @@ public class Empleado {
 		final LocalDate fechaActual= LocalDate.now();
 		
 		return fechaActual.getYear()- fechaDeNacimiento.getYear();
+	}
+	
+	public double getSueldoBasico() {
+		return sueldoBasico;
 	}
 
 }
