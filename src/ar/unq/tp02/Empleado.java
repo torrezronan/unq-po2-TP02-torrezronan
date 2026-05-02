@@ -9,6 +9,7 @@ public class Empleado {
 	private String estadoCivil;
 	private LocalDate fechaDeNacimiento;
 	
+	
 	public Empleado(String nombre,String direccion,String estadoCivil, LocalDate fechaDeNacimiento) {
 		this.nombre = nombre;
 		this.direccion = direccion;
