@@ -8,12 +8,14 @@ public class EmpleadoPermanente extends Empleado {
 	private int antiguedad;
 	private int dineroPorHijo =150 ;
 	private boolean tieneConyuge;
+	private int dineroPorConyuge = 100;
 	private int dineroPorAñoDeAntiguedad = 50;
 	
-	public EmpleadoPermanente(String nombre,String direccion,String estadoCivil, LocalDate fechaDeNacimiento, int cantidadDeHijos, int antiguedad) {
-		super(nombre,direccion,estadoCivil,fechaDeNacimiento);
+	public EmpleadoPermanente(String nombre,String direccion,String estadoCivil, LocalDate fechaDeNacimiento,double sueldoBasico, int cantidadDeHijos, int antiguedad,boolean tieneConyuge) {
+		super(nombre,direccion,estadoCivil,fechaDeNacimiento,sueldoBasico);
 		this.cantidadDeHijos = cantidadDeHijos;
 		this.antiguedad = antiguedad;
+		this.tieneConyuge = tieneConyuge;
 	}
 	
 	public double sueldoBruto(){
@@ -31,9 +33,9 @@ public class EmpleadoPermanente extends Empleado {
 	
 	public double totalAsignacionPorConyuge() {
 		
-		 final double totalPorConyuge = 100;
 		
-		if(this.tieneConyuge) { return totalPorConyuge;} else { return 0;}
+		
+		if(this.tieneConyuge) { return this.dineroPorConyuge;} else { return 0;}
 		
 	}
 	

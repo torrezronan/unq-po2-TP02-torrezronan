@@ -12,11 +12,12 @@ public class Empleado {
 	 
 	
 	
-	public Empleado(String nombre,String direccion,String estadoCivil, LocalDate fechaDeNacimiento) {
+	public Empleado(String nombre,String direccion,String estadoCivil, LocalDate fechaDeNacimiento, double sueldoBasico) {
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.estadoCivil = estadoCivil;
 		this.fechaDeNacimiento = fechaDeNacimiento ;
+		this.sueldoBasico = sueldoBasico;
 	}
 	
 	public int edad() {
