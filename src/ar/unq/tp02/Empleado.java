@@ -2,7 +2,7 @@ package ar.unq.tp02;
 
 import java.time.LocalDate;
 
-public class Empleado {
+abstract class  Empleado {
 	
 	private String nombre;
 	private String direccion;
@@ -30,6 +30,14 @@ public class Empleado {
 	public double getSueldoBasico() {
 		return sueldoBasico;
 	}
+	
+	abstract double sueldoBruto();
+	
+	public double porcentajeDeSueldoBruto(double coeficiente){
+		return this.sueldoBruto()*coeficiente;
+	}
+	
+	abstract double totalRetenciones ();
 
 }
 
